@@ -20,9 +20,17 @@ public class Employee {
     private String userId;
 
     @Embedded
+    @AttributeOverride(
+        name = "id",
+        column = @Column(name = "rankId", nullable = true)
+    )
     private RankId rankId;
-
+aa
     @Embedded
+    @AttributeOverride(
+        name = "id",
+        column = @Column(name = "departmentId", nullable = true)
+    )
     private DepartmentId departmentId;
 
     @ElementCollection
